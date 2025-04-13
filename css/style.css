@@ -12,6 +12,7 @@
   --white: hsl(0, 100%, 100%);
   --purple-100: hsl(275, 100%, 97%);
   --purple-600: hsl(292, 16%, 49%);
+  --purple-900: hsl(292, 80%, 42%);
   --purple-950: hsl(292, 42%, 14%);
 }
 
@@ -19,10 +20,134 @@ html {
   font-family: "Work Sans", sans-serif;
   font-size: 16px;
   font-weight: 400;
-  /* font-weight: 600; */
-  /* font-weight: 700; */
 }
 
 body {
   min-height: 100vh;
+  background: url(../images/background-pattern-desktop.svg) no-repeat top
+    center/contain;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--purple-100);
+}
+
+.faq {
+  margin: 8em 1.5em 1.5em 1.5em;
+  background-color: var(--white);
+  padding: 2em;
+  max-width: 35em;
+  border-radius: 1em;
+  transition: max-height 1s ease, opacity 1s ease;
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1.6em;
+  margin-bottom: 1.5em;
+}
+
+.title h1 {
+  font-size: 3em;
+  font-weight: 700;
+}
+
+.question {
+  margin-bottom: 2em;
+}
+
+.text {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1em;
+}
+
+.ques {
+  font-weight: 600;
+  font-size: 1em;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.ques:hover {
+  cursor: pointer;
+  color: var(--purple-900);
+}
+
+.open,
+.close {
+  cursor: pointer;
+  width: 1.8em;
+  height: auto;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.answer {
+  font-size: 1em;
+  color: var(--purple-600);
+  transition: max-height 1s ease, opacity 1s ease;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--purple-100);
+  width: 100%;
+  margin: 0.5em 0;
+}
+
+.hide {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+
+  .title h1 {
+    font-size: 2.5em;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  html {
+    font-size: 14.5px;
+  }
+
+  body {
+    background: url(/images/background-pattern-mobile.svg) no-repeat top
+      center/contain;
+  }
+
+  .title h1 {
+    font-size: 2.3em;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  html {
+    font-size: 14px;
+  }
+
+  body {
+    background: url(/images/background-pattern-mobile.svg) no-repeat top
+      center/contain;
+  }
+
+  .title h1 {
+    font-size: 2.2em;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  html {
+    font-size: 13px;
+  }
+
+  .title h1 {
+    font-size: 1.9em;
+  }
 }

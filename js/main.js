@@ -4,9 +4,9 @@ questions.forEach((question) => {
      const openIcon = question.querySelector(".open");
      const closeIcon = question.querySelector(".close");
      const answer = question.querySelector(".answer");
-     const text = question.querySelector(".ques");
+     const ques = question.querySelector(".ques");
 
-     [openIcon, closeIcon, text].forEach((trigger) => {
+     [openIcon, closeIcon, ques].forEach((trigger) => {
           trigger.addEventListener("click", () => {
                const isOpen = !answer.classList.contains("hide");
 
@@ -14,12 +14,10 @@ questions.forEach((question) => {
                     answer.classList.add("hide");
                     openIcon.classList.remove("hide");
                     closeIcon.classList.add("hide");
-                    answer.classList.remove("show");
                } else {
                     answer.classList.remove("hide");
                     openIcon.classList.add("hide");
                     closeIcon.classList.remove("hide");
-                    answer.classList.add("show");
                }
           });
      });
